@@ -1,9 +1,9 @@
-# atelier familial numerique.
-
-A l'attention de mes enfants qui grandissent entourés par des suports et assistant numeriques mercantiles.
-AMAZON (ECHO/TABLET/FIRE TV) / APPLE (TABLET EDU/PRO)
-
-
+# Atelier familial numerique.
+A l'attention de mes enfants qui grandissent entourés par des suports et assistant numeriques mercantiles
+   
+    AMAZON (ECHO/TABLET/FIRE TV)
+    APPLE (TABLET EDU/PRO)
+    
 
 ## Unité principal // AMUSEMENT ET APPRENTISSAGE
     ANNEE : 2022
@@ -29,6 +29,10 @@ AMAZON (ECHO/TABLET/FIRE TV) / APPLE (TABLET EDU/PRO)
     WWAN : MAGENTA
     ANNEE : 2023
     ROUTEUR : WAVLINK WL-WN538A8
+    
+## IOT // INTERRUPTEUR
+    ANNEE : 2023
+    UNITE : SHELLY 1/PLUS/1P/I4
 
 Ici git les repos
 
