@@ -1,4 +1,4 @@
-A l'attention de mes enfants qui grandissent entourés par les suports et assistant numeriques mercantiles de leurs parents
+A l'attention de mes enfants qui grandissent entourés par les supports et les assistants numeriques mercantiles de leurs parents.
 
     AMAZON (ECHO/TABLET/FIRE TV)
     APPLE (TABLETTE EDU/PRO)
@@ -13,7 +13,7 @@ A l'attention de mes enfants qui grandissent entourés par les suports et assist
     SSD : KINGSTON 960GB
     ECRAN : 24" FHD 
 
-## Unité secondaire // DEVELOPEMENT ET COMPILATION
+## Unité secondaire // TEST, DEVELOPEMENT ET COMPILATION
     ANNEE : 2019
     UNITE : HP ELITEDESK G2 Mini 65W 16GB
     UNITE : HP PRODESK G2 Mini 35W 8GB
@@ -34,7 +34,11 @@ A l'attention de mes enfants qui grandissent entourés par les suports et assist
     ANNEE : 2023
     UNITE : SHELLY 1/PLUS/1P/I4
 
+-------
+
 Ici git les repos
+
+## OPENWRT
 
 ## [Livre du savoir pratique](https://github.com/allen-smithee-dev/Le-livre-du-savoir-utile/blob/master/README.md)
 
@@ -42,3 +46,5 @@ Ici git les repos
 
 ## [Livre d'exercices pratiques](https://github.com/allen-smithee-dev/Le-livre-des-exercices-utiles/blob/master/README.md)
 
+
+-------
