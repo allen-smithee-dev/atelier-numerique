@@ -1,8 +1,8 @@
 # Atelier familial numerique.
-A l'attention de mes enfants qui grandissent entourés par des suports et assistant numeriques mercantiles
-   
+A l'attention de mes enfants qui grandissent entourés par Les suports et assistant numeriques mercantiles de leurs parents   
     AMAZON (ECHO/TABLET/FIRE TV)
-    APPLE (TABLET EDU/PRO)
+    APPLE (TABLETTE EDU/PRO)
+    GOOGLE (TABLETTE ET SMARTPHONE ANDROID)
     
 
 ## Unité principal // AMUSEMENT ET APPRENTISSAGE
