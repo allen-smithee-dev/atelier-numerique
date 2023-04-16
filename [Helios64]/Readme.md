@@ -7,6 +7,7 @@ Portage ARMBIAN
 
 Portage OPENWRT
 
-Portage FREEBSD
+Portage OPENBSD
 
 ---
+9
