@@ -1,11 +1,10 @@
-# Atelier familial numerique.
 A l'attention de mes enfants qui grandissent entourés par Les suports et assistant numeriques mercantiles de leurs parents
 
     AMAZON (ECHO/TABLET/FIRE TV)
     APPLE (TABLETTE EDU/PRO)
     GOOGLE (TABLETTE ET SMARTPHONE ANDROID)
     
-
+# Atelier familial numerique
 ## Unité principal // AMUSEMENT ET APPRENTISSAGE
     ANNEE : 2022
     UNITE: STEAM STEAMDECK 64G
