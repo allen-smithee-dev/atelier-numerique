@@ -15,6 +15,4 @@ Portage ARMBIAN
 
 Portage OPENWRT
 
-Portage OPENBSD? 
-
 ---
