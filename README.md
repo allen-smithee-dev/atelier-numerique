@@ -1,5 +1,35 @@
 # atelier familial numerique.
 
+A l'attention de mes enfants qui grandissent entourés par des suports et assistant numeriques mercantiles.
+AMAZON (ECHO/TABLET/FIRE TV) / APPLE (TABLET EDU/PRO)
+
+
+
+## Unité principal // AMUSEMENT ET APPRENTISSAGE
+    ANNEE : 2022
+    UNITE: STEAM STEAMDECK 64G
+    SD : SAMSUNG EVO 512 GB
+    DOCK : I-TECK C31HDD4KDOCKPD
+    SSD : KINGSTON 960GB
+    ECRAN : 24" FHD 
+
+## Unité secondaire // DEVELOPEMENT ET COMPILATION
+    ANNEE : 2019
+    UNITE : HP ELITEDESK G2 Mini 65W 16GB
+    UNITE : HP PRODESK G2 Mini 35W 8GB
+    HUB : DODOCOOL USB-C 11 en 1
+  
+## NAS/SERVEUR // STOCAGE ET RESEAUX
+    ANNEE : 2020
+    UNITE : KOBOL HELIOS64 
+    SSD : RECYCLAGE
+
+## ROUTEUR  // RESEAUX
+    ANNEE : 2018
+    WWAN : MAGENTA
+    ANNEE : 2023
+    ROUTEUR : WAVLINK WL-WN538A8
+
 Ici git les repos
 
 ## [Livre du savoir pratique](https://github.com/allen-smithee-dev/Le-livre-du-savoir-utile/blob/master/README.md)
