@@ -9,7 +9,7 @@ A l'attention de mes enfants qui grandissent entourés par les supports et les a
     ANNEE : 2022
     UNITE: STEAM STEAMDECK 64G
     SD : SAMSUNG EVO 512 GB
-    DOCK : I-TECK C31HDD4KDOCKPD
+    DOCK : I-TEC C31HDD4KDOCKPD
     SSD : KINGSTON 960GB
     ECRAN : 24" FHD 
 
