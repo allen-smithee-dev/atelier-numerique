@@ -1,0 +1,375 @@
+Tout lore.kernel.org
+aider / couleur / miroir / Alimentation atomique 
+De: Florian Klink < flokli@flokli.de >
+À: Heiko Stuebner < heiko@sntech.de >, Aditya Prayoga < aditya@kobol.io >
+Cc: "Florian Klink" < flokli@flokli.de >,
+	"Rob Herring" < robh + dt@kernel.org >,
+	"Uwe Kleine-König" < uwe@kleine-koenig.org >,
+	devicetree@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+	linux-rockchip@lists.infradead.org, linux-kernel@vger.kernel.org
+Objet: [ PATCH 1/2 ] arm64: dts: rockchip: Activez la puissance du disque dur sur helios64
+Date: mer. 20 oct. 2021 11:59:22 + 0200	[ aperçu du fil ]
+Message-ID: < 20211020095926.735938-1-flokli@flokli.de > (brut)
+
+Cela ajoute les blocs hdd_ { a, b } _power présents dans les hélios de l'arbian64
+dts. [ 1 ]
+
+Sans ceux alimentés, aucun disque dur n'apparaîtra ( sauf un connecté via
+la fente m.2 ).
+
+De https://wiki.kobol.io/helios64/sata/#hdd-power:
+
+> La puissance de livraison des disques durs est divisée en deux groupes:
+>
+> HDD Rail A ( Max. 3x disques )
+> HDD Rail B ( Max. 2x disques )
+>
+> Helios64 met en œuvre une approche à puissance stupéfiante où HDD Rail A sera
+> alimenté en premier, puis quelques secondes plus tard, le HDD Rail B sera mis sous tension.
+> Ce scénario de contrôle de puissance est effectué pour réduire le courant d'intrusion
+> pendant la rotation du disque.
+
+Dans la pratique, cette approche stupéfiante sera incluse dans le
+bootloader ( pas dans le noyau ), car nous pourrions vouloir démarrer à partir d'un SATA
+conduire.
+
+D'après mes expériences, si le chargeur de démarrage ne met pas en œuvre la puissance
+stupéfiant, un seul disque dur sera reconnu ( causera probablement les autres
+n'a pas démarré en raison de peu de puissance ).
+
+Pourtant, il est logique d'exposer ce bloc dans l'arborescence de l'appareil, donc le
+le noyau peut garantir que les deux rails sont sur ( et cela peut être partagé avec
+u-boot ).
+
+[ 1 ] https://github.com/armbian/build/blob/744ea89a589d62cb6f409baab60fc6664520bc39/patch/kernel/archive/rockchip64-5.14/add-board-helios64.patch
+
+Signé par: Florian Klink < flokli@flokli.de >
+---
+ .../dts / rockchip / rk3399-kobol-helios64.dts    | 32 + + + + + + + + + + + + + + +
+ 1 fichier changé, 32 insertions ( + )
+
+diff --git a / arch / arm64 / boot / dts / rockchip / rk3399-kobol-helios64.dts b / arch / arm64 / boot / dts / rockchip / rk3399-kobol-helios64.dts
+index 738cfd21df3e..93745dcc2af6 100644
+--- a / arch / arm64 / boot / dts / rockchip / rk3399-kobol-helios64.dts
++ + + b / arch / arm64 / boot / dts / rockchip / rk3399-kobol-helios64.dts
+@@ -82,6 + 82,30 @@ led-1 {
+ 		};
+ 	};
+ 
++ hdd_a_power: hdd-a-power {
++ compatible = "fixe sur régulateur";
++ active-active-élevée;
++ gpio = < & gpio1 RK_PA0 GPIO_ACTIVE_HIGH >;
++ pinctrl-0 = < & hdd_a_power_en >;
++ noms de pintrl = "par défaut";
++ régulateur toujours allumé;
++ régulateur-boot-on;
++ nom du régulateur = "hdd_a_power";
++ start-delay-us = < 2000000 >;
++ };
++
++ hdd_b_power: hdd-b-power {
++ compatible = "fixe sur régulateur";
++ active-active-élevée;
++ gpio = < & gpio1 RK_PA1 GPIO_ACTIVE_HIGH >;
++ pinctrl-0 = < & hdd_b_power_en >;
++ noms de pintrl = "par défaut";
++ régulateur toujours allumé;
++ régulateur-boot-on;
++ nom du régulateur = "hdd_b_power";
++ start-delay-us = < 2000000 >;
++ };
++
+ 	pcie_power: pcie-power {
+ 		compatible = "fixe de régulateur";
+ 		active-élevée;
+@@ -422,6 + 446,14 @@ pmic_int_l: pmic-int-l {
+ 	};
+ 
+ 	puissance {
++ hdd_a_power_en: hdd-a-power-en {
++ rockchip, broches = < 1 RK_PA0 RK_FUNC_GPIO & pcfg_pull_none >;
++ };
++
++ hdd_b_power_en: hdd-b-power-en {
++ rockchip, broches = < 1 RK_PA1 RK_FUNC_GPIO & pcfg_pull_none >;
++ };
++
+ 		vcc5v0_usb_en: vcc5v0-usb-en {
+ 			rockchip, broches = < 1 RK_PC6 RK_FUNC_GPIO & pcfg_pull_none >;
+ 		};
+-- 
+2.33.0
+
+AVERTISSEMENT: plusieurs messages ont cet ID de message
+De: Florian Klink < flokli@flokli.de >
+À: Heiko Stuebner < heiko@sntech.de >, Aditya Prayoga < aditya@kobol.io >
+Cc: "Florian Klink" < flokli@flokli.de >,
+	"Rob Herring" < robh + dt@kernel.org >,
+	"Uwe Kleine-König" < uwe@kleine-koenig.org >,
+	devicetree@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+	linux-rockchip@lists.infradead.org, linux-kernel@vger.kernel.org
+Objet: [ PATCH 1/2 ] arm64: dts: rockchip: Activez la puissance du disque dur sur helios64
+Date: mer. 20 oct. 2021 11:59:22 + 0200	[ aperçu du fil ]
+Message-ID: < 20211020095926.735938-1-flokli@flokli.de > (brut)
+
+Cela ajoute les blocs hdd_ { a, b } _power présents dans les hélios de l'arbian64
+dts. [ 1 ]
+
+Sans ceux alimentés, aucun disque dur n'apparaîtra ( sauf un connecté via
+la fente m.2 ).
+
+De https://wiki.kobol.io/helios64/sata/#hdd-power:
+
+> La puissance de livraison des disques durs est divisée en deux groupes:
+>
+> HDD Rail A ( Max. 3x disques )
+> HDD Rail B ( Max. 2x disques )
+>
+> Helios64 met en œuvre une approche à puissance stupéfiante où HDD Rail A sera
+> alimenté en premier, puis quelques secondes plus tard, le HDD Rail B sera mis sous tension.
+> Ce scénario de contrôle de puissance est effectué pour réduire le courant d'intrusion
+> pendant la rotation du disque.
+
+Dans la pratique, cette approche stupéfiante sera incluse dans le
+bootloader ( pas dans le noyau ), car nous pourrions vouloir démarrer à partir d'un SATA
+conduire.
+
+D'après mes expériences, si le chargeur de démarrage ne met pas en œuvre la puissance
+stupéfiant, un seul disque dur sera reconnu ( causera probablement les autres
+n'a pas démarré en raison de peu de puissance ).
+
+Pourtant, il est logique d'exposer ce bloc dans l'arborescence de l'appareil, donc le
+le noyau peut garantir que les deux rails sont sur ( et cela peut être partagé avec
+u-boot ).
+
+[ 1 ] https://github.com/armbian/build/blob/744ea89a589d62cb6f409baab60fc6664520bc39/patch/kernel/archive/rockchip64-5.14/add-board-helios64.patch
+
+Signé par: Florian Klink < flokli@flokli.de >
+---
+ .../dts / rockchip / rk3399-kobol-helios64.dts    | 32 + + + + + + + + + + + + + + +
+ 1 fichier changé, 32 insertions ( + )
+
+diff --git a / arch / arm64 / boot / dts / rockchip / rk3399-kobol-helios64.dts b / arch / arm64 / boot / dts / rockchip / rk3399-kobol-helios64.dts
+index 738cfd21df3e..93745dcc2af6 100644
+--- a / arch / arm64 / boot / dts / rockchip / rk3399-kobol-helios64.dts
++ + + b / arch / arm64 / boot / dts / rockchip / rk3399-kobol-helios64.dts
+@@ -82,6 + 82,30 @@ led-1 {
+ 		};
+ 	};
+ 
++ hdd_a_power: hdd-a-power {
++ compatible = "fixe sur régulateur";
++ active-active-élevée;
++ gpio = < & gpio1 RK_PA0 GPIO_ACTIVE_HIGH >;
++ pinctrl-0 = < & hdd_a_power_en >;
++ noms de pintrl = "par défaut";
++ régulateur toujours allumé;
++		regulator-boot-on;
++		regulator-name = "hdd_a_power";
++		startup-delay-us = <2000000>;
++	};
++
++	hdd_b_power: hdd-b-power {
++		compatible = "regulator-fixed";
++		enable-active-high;
++		gpio = <&gpio1 RK_PA1 GPIO_ACTIVE_HIGH>;
++		pinctrl-0 = <&hdd_b_power_en>;
++		pinctrl-names = "default";
++		regulator-always-on;
++		regulator-boot-on;
++		regulator-name = "hdd_b_power";
++		startup-delay-us = <2000000>;
++	};
++
+ 	pcie_power: pcie-power {
+ 		compatible = "regulator-fixed";
+ 		enable-active-high;
+@@ -422,6 +446,14 @@ pmic_int_l: pmic-int-l {
+ 	};
+ 
+ 	power {
++		hdd_a_power_en: hdd-a-power-en {
++			rockchip,pins = <1 RK_PA0 RK_FUNC_GPIO &pcfg_pull_none>;
++		};
++
++		hdd_b_power_en: hdd-b-power-en {
++			rockchip,pins = <1 RK_PA1 RK_FUNC_GPIO &pcfg_pull_none>;
++		};
++
+ 		vcc5v0_usb_en: vcc5v0-usb-en {
+ 			rockchip, broches = < 1 RK_PC6 RK_FUNC_GPIO & pcfg_pull_none >;
+ 		};
+-- 
+2.33.0
+
+
+_______________________________________________
+Liste de diffusion Linux-rockchip
+Linux-rockchip@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-rockchip
+AVERTISSEMENT: plusieurs messages ont cet ID de message
+De: Florian Klink < flokli@flokli.de >
+À: Heiko Stuebner < heiko@sntech.de >, Aditya Prayoga < aditya@kobol.io >
+Cc: "Florian Klink" < flokli@flokli.de >,
+	"Rob Herring" < robh + dt@kernel.org >,
+	"Uwe Kleine-König" < uwe@kleine-koenig.org >,
+	devicetree@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
+	linux-rockchip@lists.infradead.org, linux-kernel@vger.kernel.org
+Subject: [PATCH 1/2] arm64: dts: rockchip: Enable HDD power on helios64
+Date: Wed, 20 Oct 2021 11:59:22 +0200	[thread overview]
+Message-ID: <20211020095926.735938-1-flokli@flokli.de> (raw)
+
+This adds the hdd_{a,b}_power blocks present in the armbian helios64
+dts. [1]
+
+Without those powered up, no HDDs will appear (except one connected via
+the m.2 slot).
+
+From https://wiki.kobol.io/helios64/sata/#hdd-power:
+
+> The power delivery of the HDDs is divided into two group:
+>
+>     HDD Rail A (Max. 3x Drives)
+>     HDD Rail B (Max. 2x Drives)
+>
+> Helios64 implements a power staggering approach where HDD Rail A will be
+> powered up first, then few seconds later HDD Rail B will be powered up.
+> This power control scenario is performed to reduce the inrush current
+> during disk spin-up.
+
+In practice, this power staggering approach will be included in the
+bootloader (not in the kernel), as we might want to boot from a SATA
+drive.
+
+From my experiments, if the bootloader doesn't implement the power
+staggering, only one HDD will get recognized (probably cause the others
+didn't boot due to few power).
+
+Still, it makes sense to expose this block in the device-tree, so the
+kernel can ensure both rails are on (and this can be shared with
+u-boot).
+
+[1] https://github.com/armbian/build/blob/744ea89a589d62cb6f409baab60fc6664520bc39/patch/kernel/archive/rockchip64-5.14/add-board-helios64.patch
+
+Signed-off-by: Florian Klink <flokli@flokli.de>
+---
+ .../dts/rockchip/rk3399-kobol-helios64.dts    | 32 +++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/rockchip/rk3399-kobol-helios64.dts b/arch/arm64/boot/dts/rockchip/rk3399-kobol-helios64.dts
+index 738cfd21df3e..93745dcc2af6 100644
+--- a/arch/arm64/boot/dts/rockchip/rk3399-kobol-helios64.dts
++++ b/arch/arm64/boot/dts/rockchip/rk3399-kobol-helios64.dts
+@@ -82,6 +82,30 @@ led-1 {
+ 		};
+ 	};
+ 
++	hdd_a_power: hdd-a-power {
++		compatible = "regulator-fixed";
++		enable-active-high;
++		gpio = <&gpio1 RK_PA0 GPIO_ACTIVE_HIGH>;
++		pinctrl-0 = <&hdd_a_power_en>;
++		pinctrl-names = "default";
++		regulator-always-on;
++		regulator-boot-on;
++		regulator-name = "hdd_a_power";
++		startup-delay-us = <2000000>;
++	};
++
++	hdd_b_power: hdd-b-power {
++		compatible = "regulator-fixed";
++		enable-active-high;
++		gpio = <&gpio1 RK_PA1 GPIO_ACTIVE_HIGH>;
++		pinctrl-0 = <&hdd_b_power_en>;
++		pinctrl-names = "default";
++		regulator-always-on;
++		regulator-boot-on;
++		regulator-name = "hdd_b_power";
++		startup-delay-us = <2000000>;
++	};
++
+ 	pcie_power: pcie-power {
+ 		compatible = "regulator-fixed";
+ 		enable-active-high;
+@@ -422,6 +446,14 @@ pmic_int_l: pmic-int-l {
+ 	};
+ 
+ 	power {
++		hdd_a_power_en: hdd-a-power-en {
++			rockchip,pins = <1 RK_PA0 RK_FUNC_GPIO &pcfg_pull_none>;
++		};
++
++		hdd_b_power_en: hdd-b-power-en {
++			rockchip,pins = <1 RK_PA1 RK_FUNC_GPIO &pcfg_pull_none>;
++		};
++
+ 		vcc5v0_usb_en: vcc5v0-usb-en {
+ 			rockchip,pins = <1 RK_PC6 RK_FUNC_GPIO &pcfg_pull_none>;
+ 		};
+-- 
+2.33.0
+
+
+_______________________________________________
+linux-arm-kernel mailing list
+linux-arm-kernel@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-arm-kernel
+next             reply	other threads:[~2021-10-20 10:08 UTC|newest]
+
+Thread overview: 15+ messages / expand[flat|nested]  mbox.gz  Atom feed  top
+2021-10-20  9:59 Florian Klink [this message]
+2021-10-20  9:59 ` [PATCH 1/2] arm64: dts: rockchip: Enable HDD power on helios64 Florian Klink
+2021-10-20  9:59 ` Florian Klink
+2021-10-20  9:59 ` [PATCH 2/2] arm64: dts: rockchip: fix poweroff Florian Klink
+2021-10-20  9:59   ` Florian Klink
+2021-10-20  9:59   ` Florian Klink
+2021-10-29  0:08   ` Dennis Gilmore
+2021-10-29  0:08     ` Dennis Gilmore
+2021-10-29  0:08     ` Dennis Gilmore
+2021-10-29  0:08 ` [PATCH 1/2] arm64: dts: rockchip: Enable HDD power on helios64 Dennis Gilmore
+2021-10-29  0:08   ` Dennis Gilmore
+2021-10-29  0:08   ` Dennis Gilmore
+2021-11-21 18:52 ` Heiko Stuebner
+2021-11-21 18:52   ` Heiko Stuebner
+2021-11-21 18:52   ` Heiko Stuebner
+find likely ancestor, descendant, or conflicting patches for this message:
+dfblob:738cfd21df3 dfblob:738cfd21df3 dfblob:738cfd21df3
+dfblob:93745dcc2af dfblob:93745dcc2af dfblob:93745dcc2af
+
+	(help)
+Reply instructions:
+
+You may reply publicly to this message via plain-text email
+using any one of the following methods:
+
+* Save the following mbox file, import it into your mail client,
+  and reply-to-all from there: mbox
+
+  Avoid top-posting and favor interleaved quoting:
+  https://en.wikipedia.org/wiki/Posting_style#Interleaved_style
+
+* Reply using the --to, --cc, and --in-reply-to
+  switches of git-send-email(1):
+
+  git send-email \
+    --in-reply-to=20211020095926.735938-1-flokli@flokli.de \
+    --to=flokli@flokli.de \
+    --cc=aditya@kobol.io \
+    --cc=devicetree@vger.kernel.org \
+    --cc=heiko@sntech.de \
+    --cc=linux-arm-kernel@lists.infradead.org \
+    --cc=linux-kernel@vger.kernel.org \
+    --cc=linux-rockchip@lists.infradead.org \
+    --cc=robh+dt@kernel.org \
+    --cc=uwe@kleine-koenig.org \
+    /path/to/YOUR_REPLY
+
+  https://kernel.org/pub/software/scm/git/docs/git-send-email.html
+
+* If your mail client supports setting the In-Reply-To header
+  via mailto: links, try the mailto: link
+Assurez-vous que votre réponse a un Objet: en-tête en haut et une ligne vierge avant le corps du message.
+Il s'agit d'un indice externe de plusieurs boîtes de réception publiques,
+voir instructions de mise en miroir sur la façon de cloner et de refléter
+toutes les données et tous les codes utilisés par cet index externe.
