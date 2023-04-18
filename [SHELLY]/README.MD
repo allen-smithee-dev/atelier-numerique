@@ -20,17 +20,17 @@ TABLEAU ELECTRIQUE
 |       ├─ VEILLEUSE CH1                      |
 |
 ├─ DIJONCTEUR ETAGE
-|   ├─ SHELLY I4
-|   ├─ BOITIER DE DERIVATION COULOIR                             | 
+|   ├─ SHELLY I4                              |
+|   ├─ BOITIER DE DERIVATION COULOIR          | 
 |       ├─ SHELLY 1
-|              ├─ ECLAIRAGE DRESSING
+|              ├─ ECLAIRAGE DRESSING          |
 |         
-|   ├─ BOITIER DE DERIVATION CH1                             | 
-|       ├─ SHELLY 1PM 
+|   ├─ BOITIER DE DERIVATION CH1               
+|   ├─ SHELLY 1PM 
 |              ├─ ECLAIRAGE
 |              ├─ PRISE
 |
-|   ├─ BOITIER DE DERIVATION CH2                           |
+|   ├─ BOITIER DE DERIVATION CH2             
 |       ├─ SHELLY I4
 |       ├─ SHELLY 1PM 
 |              ├─ ECLAIRAGE
