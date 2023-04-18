@@ -17,6 +17,7 @@ https://github.com/armbian/build/pull/2376
 https://github.com/useful64/build/commit/c05076c813359b009f31b24c618bdc025674d2b7
 
 
+------------------
 
 .dts modifier la configuration des RAIL A et B
 
