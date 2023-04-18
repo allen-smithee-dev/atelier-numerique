@@ -1,5 +1,9 @@
 # KOBOL Helios64
 
+https://github.com/kobol-io/u-boot
+
+https://github.com/kobol-io/build
+
 ## ARMBIAN
 https://github.com/armbian/build
 
