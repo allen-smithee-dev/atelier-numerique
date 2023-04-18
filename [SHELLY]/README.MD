@@ -33,13 +33,12 @@ TABLEAU ELECTRIQUE
 |   ├─ BOITIER DE DERIVATION CH2
 |       ├─ SHELLY I4
 |       ├─ SHELLY 1PM
-|            ├─ ECLAIRAGE
-|                  ├─ SHELLY 1PLUS
-|                        ├─ ECLAIRAGE PIECE
-|                  ├─ SHELLY 1PLUS
-|                        ├─ ECLAIRAGE LIT
-|                  ├─ SHELLY 1
-|                        ├─ PRISE ELECTRIQUE 
+|            ├─ SHELLY 1PLUS
+|                 ├─ ECLAIRAGE PIECE
+|            ├─ SHELLY 1PLUS
+|                 ├─ ECLAIRAGE LIT
+|            ├─ SHELLY 1
+|                 ├─ PRISE ELECTRIQUE 
 |
 ├─ DIJONCTEUR SERVICE RDC B13
 |    ├─ BOITIER DE DERIVATION SERVICE
