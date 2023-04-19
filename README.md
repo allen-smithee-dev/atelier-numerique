@@ -38,8 +38,6 @@ A l'attention de mes enfants qui grandissent entourés par les supports et les a
 
 Ici git les repos
 
-## OPENWRT
-
 ## [Publication sur les programmes pratiques](https://github.com/allen-smithee-dev/Publication-programme-pratique)
 
 ## [Publication sur la ligne de commande](https://github.com/allen-smithee-dev/Publication-sur-la-ligne-de-commande)
