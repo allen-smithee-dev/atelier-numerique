@@ -26,6 +26,8 @@ https://github.com/armbian/build/pull/4480
 
 https://github.com/armbian/build/pull/4480/files/a1227cb75377f6c59a48eb15d80e84dedd4289d9
 
+https://github.com/prahal/build/blob/31a4e2e0e47f7c41d9d2a81434edf875dc3a75c8/patch/u-boot/u-boot-rockchip64/add-board-helios64.patch
+
 >> https://forum.armbian.com/topic/24005-helios64-u-boot-does-not-build-anymore-after-we-bumped-to-202207/
 
 ------------------
