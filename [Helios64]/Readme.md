@@ -32,6 +32,6 @@ https://github.com/armbian/build/pull/4480/files/a1227cb75377f6c59a48eb15d80e84d
 
 ---
 
-Portage ARMBIAN non pertinent (BULLEYES et BURSTER sont à jours) 
+Portage ARMBIAN non pertinent (BULLSEYE et BURSTER sont à jours) 
 
 Portage OPENWRT (sur SPI 128Mbit (16MB) + EMMC) me paraît pertinent.
