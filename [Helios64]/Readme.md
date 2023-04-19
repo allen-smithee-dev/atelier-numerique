@@ -28,8 +28,6 @@ https://github.com/useful64/build/commit/c05076c813359b009f31b24c618bdc025674d2b
 
 ---
 
-Portage ARMBIAN
+Portage ARMBIAN non pertinent (BULLEYES et BURSTER sont à jours) 
 
-Portage OPENWRT
-
----
+Portage OPENWRT (sur SPI 128Mbit (16MB) + EMMC) me paraît pertinent.
