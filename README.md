@@ -40,11 +40,11 @@ Ici git les repos
 
 ## OPENWRT
 
-## [Livre du savoir pratique](https://github.com/allen-smithee-dev/Le-livre-du-savoir-utile/blob/master/README.md)
+## [Publication sur les programmes pratiques](https://github.com/allen-smithee-dev/Publication-programme-pratique)
 
-## [Publication sur la ligne de commande](https://github.com/allen-smithee-dev/Publication-sur-la-ligne-de-commande/blob/master/README-fr.md)
+## [Publication sur la ligne de commande](https://github.com/allen-smithee-dev/Publication-sur-la-ligne-de-commande)
 
-## [Livre d'exercices pratiques](https://github.com/allen-smithee-dev/Le-livre-des-exercices-utiles/blob/master/README.md)
+## [Publication d'exercices pratiques](https://github.com/allen-smithee-dev/Puplication-exercice-pratique)
 
 
 -------
