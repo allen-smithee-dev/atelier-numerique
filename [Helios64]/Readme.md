@@ -26,7 +26,7 @@ https://github.com/armbian/build/pull/4480
 
 https://github.com/armbian/build/pull/4480/files/a1227cb75377f6c59a48eb15d80e84dedd4289d9
 
-Salon >> https://forum.armbian.com/topic/24005-helios64-u-boot-does-not-build-anymore-after-we-bumped-to-202207/
+>> https://forum.armbian.com/topic/24005-helios64-u-boot-does-not-build-anymore-after-we-bumped-to-202207/
 
 ------------------
 
