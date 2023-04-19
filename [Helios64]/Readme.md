@@ -21,7 +21,7 @@ https://github.com/armbian/build/pull/2376
 
 https://github.com/useful64/build/commit/c05076c813359b009f31b24c618bdc025674d2b7
 
-### Resolution ?
+### Resolution compilation
 https://github.com/armbian/build/pull/4480
 
 https://github.com/armbian/build/pull/4480/files/a1227cb75377f6c59a48eb15d80e84dedd4289d9
