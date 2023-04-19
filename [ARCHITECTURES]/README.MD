@@ -4,8 +4,6 @@
 
 ## ARM
 
-## INTEL 
-
-## ST
+## INTEL
 
 ## ... 
