@@ -39,7 +39,7 @@ définit ce que led à utiliser pour les codes d'erreur pour chaque carte
 
 ##Notez que certaines de ces fonctions sont maintenant effectuées dans le DTS pour la carte.
 
-### /target/linux/< arch_name >/base-files/lib/…
+### /target/linux/<arch_name>/base-files/lib/…
 Ce dossier contient des fichiers et des dossiers qui seront intégrés dans le dossier / lib du firmware.
 
 ## Ce sont ses sous-dossiers et fichiers:
@@ -53,10 +53,10 @@ scripts de démarrage préinit
 ### …Mise à niveau/ 
 scripts de mise à niveau courants < arch_name >
 
-### /target/linux/< arch_name >/base-files/sbin
+### /target/linux/<arch_name>/base-files/sbin
 Ce dossier contient des fichiers et des dossiers qui seront intégrés dans le dossier / sbin du firmware, généralement des scripts et outils courants < arch_name > sbin.
 
-### /target/linux/< arch_name >/dts/
+### /target/linux/<arch_name>/dts/
 Appareil des fichiers source d'arborescence ou dts pour faire court.
 
 ### Certaines architectures ont le répertoire DTS plus bas. Les appareils ARM, par exemple, l'ont généralement localisé à files-X.yy/arch/arm/boot/dts/
@@ -65,16 +65,19 @@ Si le fichier DTS ou DTSI est déjà présent dans Linux en amont, il ne sera g�
 
 Configuration de la cible et exécution make target/linux/{clean,prepare} téléchargera et corrigera Linux, permettant de trouver le fichier résultant dans le build_dir
 
-/target/linux/< arch_name >/image/
+### /target/linux/<arch_name>/image/
 Configuration nécessaire pour créer des images flashables spécifiques à l'appareil.
 
-/target/linux/< arch_name >/< board_name >/
+### /target/linux/<arch_name>/<board_name>/
 Configuration spécifique au forum.
 
-/target/linux / < arch_name > / modules.mk
+### /target/linux/<arch_name>/modules.mk
 Fichier de configuration du module du noyau spécifique à l'arche pour menuconfig
 
+### Making new device appear in make menuconfig
+After edit the files above, you need to touch the makefiles
 
+    touch target/linux/*/Makefile
 
 
 
