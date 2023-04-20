@@ -42,6 +42,10 @@ https://github.com/armbian/cache-uboot/pkgs/container/cache-uboot%2Fuboot-helios
 
 >> https://forum.armbian.com/topic/24005-helios64-u-boot-does-not-build-anymore-after-we-bumped-to-202207/
 
+### c'est propre
+[ Rockchip64 ] Déménager des configurations spécifiques à la carte #4974
+
+
 ------------------
 
 .dts modifier la configuration des RAIL A et B
