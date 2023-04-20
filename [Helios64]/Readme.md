@@ -21,6 +21,16 @@ https://github.com/armbian/build/pull/2376
 
 https://github.com/useful64/build/commit/c05076c813359b009f31b24c618bdc025674d2b7
 
+## fix
+
+### Stabiliter
+https://github.com/armbian/build/pull/2200
+### Aprayoga
+https://github.com/armbian/build/pull/2200/commits/4a1b7adae26cf74c2bc82577ed8d2dc408407d4b
+
+### Useful64
+https://github.com/useful64/build/commit/5c4254886ea8fe1d854651f896b2825f62c8e390
+
 ### Compilation u-boot v2022.07 pour Helios64
 https://github.com/armbian/build/pull/4480
 
