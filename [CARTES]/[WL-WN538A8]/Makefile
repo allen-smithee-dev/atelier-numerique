@@ -1,4 +1,10 @@
 # SPDX-License-Identifier: GPL-2.0
+# 
+# linux/master/arch/arm/boot/dts/Makefile
+# https://raw.githubusercontent.com/torvalds/linux/master/arch/arm/boot/dts/Makefile
+#
+#
+
 dtb-$(CONFIG_ARCH_ALPINE) += \
 	alpine-db.dtb
 dtb-$(CONFIG_MACH_ARTPEC6) += \
