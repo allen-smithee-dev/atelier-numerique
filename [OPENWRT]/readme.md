@@ -36,13 +36,13 @@ Une bonne méthode est d'apprendre par l'exemple, vous pouvez donc faire:
     target/linux/ramips/dts/GL-MT300A.dts
     target/linux/ramips/image/mt7620.mk
 
-##Fichiers importants
+## Fichiers importants
 Il s'agit d'une carte générale de l'emplacement des fichiers les plus importants:
 
 ### /target/linux/< arch_name >/base-files/etc/…
 Ce dossier contient des fichiers et des dossiers qui seront intégrés dans le dossier / etc du firmware.
 
-##Ce sont ses sous-dossiers et fichiers:
+## Ce sont ses sous-dossiers et fichiers:
 
 ### …board.d/ 
 scripts pour définir le matériel par défaut spécifique à l'appareil, comme les leds et les interfaces réseau.
@@ -55,7 +55,7 @@ fichiers pour définir les valeurs par défaut de configuration uci spécifiques
 ### …diag.sh 
 définit ce que led à utiliser pour les codes d'erreur pour chaque carte
 
-##Notez que certaines de ces fonctions sont maintenant effectuées dans le DTS pour la carte.
+## Notez que certaines de ces fonctions sont maintenant effectuées dans le DTS pour la carte.
 
 ### /target/linux/<arch_name>/base-files/lib/…
 Ce dossier contient des fichiers et des dossiers qui seront intégrés dans le dossier / lib du firmware.
@@ -81,7 +81,13 @@ Appareil des fichiers source d'arborescence ou dts pour faire court.
 
 Si le fichier DTS ou DTSI est déjà présent dans Linux en amont, il ne sera généralement pas présent dans la source OpenWrt. 
 
-Configuration de la cible et exécution make target/linux/{clean,prepare} téléchargera et corrigera Linux, permettant de trouver le fichier résultant dans le build_dir
+Configuration de la cible et exécution 
+
+    make target/linux/{clean,prepare} 
+    
+téléchargera et corrigera Linux, permettant de trouver le fichier résultant dans le 
+
+    build_dir
 
 ### /target/linux/<arch_name>/image/
 Configuration nécessaire pour créer des images flashables spécifiques à l'appareil.
