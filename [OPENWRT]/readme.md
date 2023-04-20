@@ -35,6 +35,7 @@ https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=b72157984268b6542dd667
 # WL-WN538A8
 https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=62dadcb86c6e6f80ce6fbcd89befc3cc22c2176a
 
+--------------
 
 # HELIOS64
 ## Ajout d'un nouvel appareil
