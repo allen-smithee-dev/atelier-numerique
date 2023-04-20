@@ -16,8 +16,24 @@ Ce sont les dossiers que vous pouvez trouver dans le git du projet:
 ## Prise en charge 
 https://downloads.openwrt.org/
 
-# HELIOS64
+Exemple
 
+### Helios4
+https://openwrt.org/toh/hwdata/kobol/kobol_helios4
+https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=480003e9eb0dac5dba032fbce64c35c34ff386ce
+
+### Rockpro 
+https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6a05a85dcbf91777a3666693b41bd71dee6d9bfd
+
+### R4S
+https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=b72157984268b6542dd667859e4aed9cc2bbb7f5
+
+
+## WL-WN538A8
+https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=62dadcb86c6e6f80ce6fbcd89befc3cc22c2176a
+
+
+# HELIOS64
 ## Ajout d'un nouvel appareil
 Un bon conseil complet serait de commencer par examiner les engagements récents concernant l'ajout d'un nouvel appareil, de voir quels fichiers ont été modifiés et comment. De nombreux fichiers essaient d'être aussi explicites que possible, la plupart du temps, leur ouverture suffira à comprendre leur fonction.
 
@@ -105,5 +121,5 @@ After edit the files above, you need to touch the makefiles
 
 
 
-## WL-WN538A8
+
 
