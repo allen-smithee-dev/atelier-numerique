@@ -16,7 +16,25 @@ Ce sont les dossiers que vous pouvez trouver dans le git du projet:
 ## Prise en charge 
 https://downloads.openwrt.org/
 
-## HELIOS64
+# HELIOS64
+
+## Ajout d'un nouvel appareil
+Un bon conseil complet serait de commencer par examiner les engagements récents concernant l'ajout d'un nouvel appareil, de voir quels fichiers ont été modifiés et comment. De nombreux fichiers essaient d'être aussi explicites que possible, la plupart du temps, leur ouverture suffira à comprendre leur fonction.
+
+## Apprendre par l'exemple
+Recherche par grep localement
+Une bonne méthode est d'apprendre par l'exemple, vous pouvez donc faire:
+
+    grep -lri mt300a target/
+
+### Le résultat est une liste minimale de fichiers nécessaires pour ajouter une nouvelle carte:
+
+    target/linux/ramips/base-files/etc/board.d/01_leds
+    target/linux/ramips/base-files/etc/board.d/02_network
+    target/linux/ramips/base-files/lib/upgrade/platform.sh
+    target/linux/ramips/base-files/lib/ramips.sh
+    target/linux/ramips/dts/GL-MT300A.dts
+    target/linux/ramips/image/mt7620.mk
 
 ##Fichiers importants
 Il s'agit d'une carte générale de l'emplacement des fichiers les plus importants:
