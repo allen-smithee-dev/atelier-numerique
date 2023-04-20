@@ -13,10 +13,12 @@ Ce sont les dossiers que vous pouvez trouver dans le git du projet:
     /chaîne à outils : makefile et configuration pour la construction de la chaîne d'outils
     /outils : divers outils utilisés tout au long du processus de construction
 
+--------------
+
 ## Prise en charge 
 https://downloads.openwrt.org/
 
-Exemple
+## Exemple
 
 ### Helios4
 https://openwrt.org/toh/hwdata/kobol/kobol_helios4
@@ -28,8 +30,9 @@ https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=6a05a85dcbf91777a36666
 ### R4S
 https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=b72157984268b6542dd667859e4aed9cc2bbb7f5
 
+--------------
 
-## WL-WN538A8
+# WL-WN538A8
 https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=62dadcb86c6e6f80ce6fbcd89befc3cc22c2176a
 
 
