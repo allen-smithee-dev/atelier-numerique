@@ -38,6 +38,8 @@ https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=62dadcb86c6e6f80ce6fbc
 --------------
 
 # HELIOS64
+https://raw.githubusercontent.com/prahal/build/31a4e2e0e47f7c41d9d2a81434edf875dc3a75c8/patch/u-boot/u-boot-rockchip64/add-board-helios64.patch
+
 ## Ajout d'un nouvel appareil
 Un bon conseil complet serait de commencer par examiner les engagements récents concernant l'ajout d'un nouvel appareil, de voir quels fichiers ont été modifiés et comment. De nombreux fichiers essaient d'être aussi explicites que possible, la plupart du temps, leur ouverture suffira à comprendre leur fonction.
 
