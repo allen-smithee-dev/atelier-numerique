@@ -45,7 +45,8 @@ https://github.com/armbian/cache-uboot/pkgs/container/cache-uboot%2Fuboot-helios
 ### [ Rockchip64 ] Déménager des configurations spécifiques à la carte #4974
 https://github.com/armbian/build/pull/4974
 
-### [correction de code] https://github.com/armbian/build/pull/5080/commits/3f5b6572629330ad0e617e006526190e0d086fd1
+### [correction de code] 
+https://github.com/armbian/build/pull/5080/commits/3f5b6572629330ad0e617e006526190e0d086fd1
 
 ------------------
 
