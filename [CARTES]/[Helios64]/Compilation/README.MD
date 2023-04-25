@@ -11,6 +11,8 @@ git clone -b branch https://github.com/name/repo.git
 git clone -b branch https://github.com/name/repo.git
 ### Firmware ARM - Rkbin
 git clone -b branch https://github.com/name/repo.git
+### distribution pour la compilation - Station
+git clone -b branch https://github.com/name/repo.git
 ### Lanceur - U-boot
 git clone -b branch https://github.com/name/repo.git
 
@@ -28,6 +30,6 @@ git clone -b branch https://github.com/name/repo.git
 ├── DISTRIBUTION/
 ├── Kernel/
 ├── Rkbin/
-├── SUPP/
+├── Station/
 └── U-boot/
 ~~~
