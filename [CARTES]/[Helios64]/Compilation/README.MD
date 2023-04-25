@@ -18,6 +18,8 @@ git clone -b branch https://github.com/name/repo.git
 ### Distribution - Build
 git clone -b branch https://github.com/name/repo.git
 
+## mkdir /COMPILATION/ENVIRONNEMENT && cd /COMPILATION/ENVIRONNEMENT
+git clone -b branch https://github.com/name/repo.git
 
 ~~~
 /COMPILATION
