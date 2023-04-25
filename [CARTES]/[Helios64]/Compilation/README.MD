@@ -1,28 +1,31 @@
 # dossier de compilation 
 EXEMPLE:
 
-## mkdir /COMPILATION/RK3399/HELIOS64 && cd /COMPILATION/RK3399/HELIOS64/
+## mkdir /COMPILATION/ && cd /COMPILATION/
+
+### Script - Assembleur
+git clone -b branch https://github.com/name/repo.git
+### Prise en charge - Board
+git clone -b branch https://github.com/name/repo.git
+### Linux - Kernel
+git clone -b branch https://github.com/name/repo.git
 ### Firmware ARM - Rkbin
 git clone -b branch https://github.com/name/repo.git
 ### Lanceur - U-boot
 git clone -b branch https://github.com/name/repo.git
-### Linux - Kernel
-git clone -b branch https://github.com/name/repo.git
 
-## mkdir /COMPILATION/RK3399/HELIOS64/DISTRIBUTION && cd /COMPILATION/RK3399/HELIOS64/DISTRIBUTION/
+## mkdir /COMPILATION/DISTRIBUTION && cd /COMPILATION/DISTRIBUTION/
 ### Distribution - Build
 git clone -b branch https://github.com/name/repo.git
+
+
 ~~~
-ll /COMPILATION/RK3399/HELIOS64/
-├── DISTRIBUTION/DISTRIBUTION/Build
+/COMPILATION
+├── Assembleur/
+├── Board/
+├── DISTRIBUTION/
 ├── Kernel/
 ├── Rkbin/
+├── SUPP/
 └── U-boot/
 ~~~
-
-# Assembleur
-EXEMPLE:
-
-cd /COMPILATION/
-### Script - Assembleur
-git clone -b branch https://github.com/name/repo.git
