@@ -10,7 +10,6 @@ git clone -b branch https://github.com/name/repo.git
 ### Linux - Kernel
 git clone -b branch https://github.com/name/repo.git
 
-
 ## mkdir /COMPILATION/RK3399/HELIOS64/DISTRIBUTION && cd /COMPILATION/RK3399/HELIOS64/DISTRIBUTION/
 ### Distribution - Build
 git clone -b branch https://github.com/name/repo.git
