@@ -1,0 +1,10 @@
+#
+# ASDev
+#
+
+HELIOS64 BOARD
+M:	Allen Smithee Dev <allen.smithee.dev@gmail.com>
+S:	Maintained
+F:	board/kobol/helios64/
+F:	include/configs/helios64.h
+F:	configs/helios64_defconfig
