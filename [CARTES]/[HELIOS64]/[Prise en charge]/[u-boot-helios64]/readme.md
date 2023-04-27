@@ -10,6 +10,8 @@ https://www.linuxjournal.com/content/handy-u-boot-trick
 
 https://www.intel.com/content/www/us/en/docs/programmable/683187/20-1/boot-tools-user-guide.html
 
+https://www.rocketboards.org/foswiki/Documentation/BuildingBootloaderStratix10
+
 ${CROSS_COMPILE}gcc --version
 
 make
