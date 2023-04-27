@@ -1,5 +1,5 @@
 
-U boot
+ici Git le chargeur
 
 
 https://developer.technexion.com/docs/preparing-a-toolchain-for-building-arm-binaries-on-x86-hosts

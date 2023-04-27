@@ -1,1 +1,2 @@
-ici Git *
+ici Git le KERNEL
+
